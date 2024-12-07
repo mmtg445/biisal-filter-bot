@@ -1,18 +1,21 @@
-# Base image
-FROM python:3.10-slim
+# Base image হিসাবে Python ব্যবহার করা হচ্ছে
+FROM python:3.9-slim
 
-# Set the working directory
+# সিস্টেম আপডেট ও Git ইনস্টল করা
+RUN apt-get update && apt-get install -y git && apt-get clean
+
+# কাজের ডিরেক্টরি সেট করা
 WORKDIR /app
 
-# Copy project files to the container
-COPY . /app
+# ডিপেনডেন্সি ফাইল কপি করা
+COPY requirements.txt .
 
-# Install dependencies
+# পিপ আপডেট ও ডিপেনডেন্সি ইন্সটল করা
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
-# Expose the required port
-EXPOSE 8080
+# অ্যাপ ফাইলগুলো কপি করা
+COPY . .
 
-# Command to run the bot
+# কন্টেইনার রান করার সময় যে কমান্ডটি চালাবে
 CMD ["python", "bot.py"]
