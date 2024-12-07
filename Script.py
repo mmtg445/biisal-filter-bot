@@ -43,9 +43,9 @@ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇ ᴀɴᴅ 
 🍿 ʙʀᴀɪɴ ғᴜᴇʟᴇᴅ : <a href="https://www.mongodb.com/">ᴍᴏɴɢᴏ ᴅʙ</a>
 🐍 ᴄᴏᴅɪɴɢ ᴍᴜsᴄʟᴇs : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ 3</a>
 😚 ᴍʏ ᴛʀᴜsᴛʏ sᴛᴇᴇᴅ: <a href="https://github.com/Mayuri-Chan/pyrofork">ᴘʏʀᴏғᴏʀᴋ</a>
-🙏🏻 ᴍʏ ᴄʀᴇᴀᴛᴏʀ : ʟᴏʀᴅ ᴋʀɪsʜɴᴀ
-🤡 ᴍʏ ᴍᴀɴᴀɢᴇʀ : <a href="https://telegram.me/biisal">ʙɪɪsᴀʟ</a>
-🧑🏻‍💻 ʀᴇᴘᴏ : <a href="https://github.com/biisal/biisal-filter-bot">ʟɪɴᴋ</a>
+🙏🏻 ᴍʏ ᴄʀᴇᴀᴛᴏʀ : Rahat
+🤡 ᴍʏ ᴍᴀɴᴀɢᴇʀ : <a href="https://telegram.me/RahatVx">Rahat</a>
+🧑🏻‍💻 ʀᴇᴘᴏ : <a href="https://telegram.me/RahatVx">ʟɪɴᴋ</a>
 </b>"""
     SUPPORT_GRP_MOVIE_TEXT = '''<b>ʜᴇʏ {}
 
@@ -125,7 +125,7 @@ User - {}"""
 
 𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆 𝗺𝗼𝘃𝗶𝗲 𝗼𝗿 𝘀𝗲𝗿𝗶𝗲𝘀 𝗶𝗻 𝘁𝗵𝗮𝘁 𝗻𝗮𝗺𝗲.. 😐 To Add Movie DM @RahatVx"""
 
-    I_CUD_NT = """😑 𝗛𝗲𝗹
+    I_CUD_NT = """😑 𝗛𝗲𝗹𝗹𝗼 {} /Request To Add
 
 𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 😞... 𝗰𝗵𝗲𝗰𝗸 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴."""
     
