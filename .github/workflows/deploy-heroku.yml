@@ -1,0 +1,44 @@
+name: Deploy to Heroku
+
+on:
+  push:
+    branches:
+      - main  # শুধু main ব্রাঞ্চে পুশ হলে রান করবে
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # কোড চেকআউট
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Python সেটআপ
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    # Dependencies ইন্সটল করুন
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # Heroku ডেপ্লয়মেন্ট
+    - name: Deploy to Heroku
+      env:
+        HEROKU_API_KEY: "your_heroku_api_key"  # সরাসরি Heroku API Key লিখুন
+        HEROKU_APP_NAME: "your_app_name"      # সরাসরি অ্যাপের নাম লিখুন
+        HEROKU_GMAIL: "your_gmail@example.com" # সরাসরি Gmail লিখুন
+        HEROKU_TEAM: "your_team_name"         # সরাসরি টিমের নাম লিখুন
+      run: |
+        echo "Deploying to Heroku"
+        echo "Heroku Gmail: $HEROKU_GMAIL"
+        echo "Heroku Team: $HEROKU_TEAM"
+        git init
+        heroku git:remote -a $HEROKU_APP_NAME
+        git add .
+        git commit -m "Deploy from GitHub Actions"
+        git push -f heroku HEAD:main
