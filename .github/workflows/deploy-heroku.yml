@@ -1,9 +1,20 @@
 name: Deploy to Heroku
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      heroku_api_key:
+        description: 'Heroku API Key'
+        required: true
+      heroku_app_name:
+        description: 'Heroku App Name'
+        required: true
+      heroku_email:
+        description: 'Heroku Email'
+        required: true
+      heroku_team_name:
+        description: 'Heroku Team Name'
+        required: true
 
 jobs:
 
@@ -16,9 +27,9 @@ jobs:
     - name: Deploy to Heroku
       uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-        heroku_email: ${{secrets.HEROKU_EMAIL}}
+        heroku_api_key: ${{ github.event.inputs.heroku_api_key }}
+        heroku_app_name: ${{ github.event.inputs.heroku_app_name }}
+        heroku_email: ${{ github.event.inputs.heroku_email }}
         usedocker: false
-        app_name: ${{secrets.HEROKU_APP_NAME}}
-        team: ${{secrets.HEROKU_TEAM_NAME}}
+        app_name: ${{ github.event.inputs.heroku_app_name }}
+        team: ${{ github.event.inputs.heroku_team_name }}
